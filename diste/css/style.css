@@ -1,0 +1,49 @@
+.HeadingC {
+  color: #fff;
+}
+.theadc {
+  background-color: #026b92;
+  color: #fff;
+}
+.act button {
+  width: 20%;
+  float: right;
+  margin: 5px;
+}
+.content-wrapper {
+  background: #d0f0ff !important;
+}
+.icon-container {
+  width: 30px;
+  height: 30px;
+  background-color: #94dbf5;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container i {
+  color: #026b92;
+}
+
+#upload-input {
+  position: absolute;
+  /* top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; */
+  opacity: 0;
+  cursor: pointer;
+}
+.AddDocMain {
+  background-color: #fff;
+  color: #026b92;
+  width: 80%;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}

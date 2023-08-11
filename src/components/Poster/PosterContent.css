@@ -1,0 +1,80 @@
+.text-center {
+    position: relative;
+  }
+  
+  .poster-image {
+    width: 260px; 
+    height: 400px; 
+    position: relative;
+    z-index: 1;
+    background-image: url('/images/poster.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-image {
+    position: absolute;
+    transform: translate(-53%, -88%);
+    z-index: 2;
+  }
+  .profile-poster{
+    vertical-align: middle;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    /* margin-bottom: 160px; */
+  }
+  
+  .mg-l{
+    margin-left: 15px;
+  }
+
+  .name1{
+    position: absolute;
+    top: 115%;
+    margin-left: 15px;
+  }
+  .mobilediv1{
+   position: absolute;
+   top: 165%;
+   left: -40%;
+   font-size: 10px;
+  }
+  
+  .city1{
+    position: absolute;
+    top: 163%;
+   left: 35%;
+   font-size: 11px;
+   width:110px;
+  }
+
+  /* .poster-image {
+    width: 260px; 
+    height: 400px; 
+    position: relative;
+    z-index: 1;
+    background-image: url('../../dist/img/poster.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-image {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10em;
+  }
+  
+  .profile-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */
