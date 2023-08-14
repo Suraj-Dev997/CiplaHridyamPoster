@@ -1,4 +1,5 @@
 import "./DashboardContent.css";
+
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BASEURL } from "../../constant/constant";
@@ -22,13 +23,13 @@ const DashboardContent = () => {
   const [img, setImage] = useState("");
   const [img1, setImage1] = useState("");
   const [vid, setVideo] = useState("");
-  const [videoname, setVideoName] = useState("")
+  const [videoname, setVideoName] = useState("");
   const [loading, setLoading] = useState(false);
   const [qrcode, setQrcode] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
-  
+
   const [cropper, setCropper] = useState();
-  const [cropmodel, setCropmodel] = useState(false)
+  const [cropmodel, setCropmodel] = useState(false);
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + 4) % 4);
   };
@@ -45,16 +46,15 @@ const DashboardContent = () => {
           return new File([blob], "docimage.png");
         });
       if (file) {
-       setImage(file);
+        setImage(file);
       }
     }
-    setCropmodel(false)
+    setCropmodel(false);
   };
 
-  const setCropperFun = (cropvalue)=>{
-     setCropper(cropvalue)
-  }
-
+  const setCropperFun = (cropvalue) => {
+    setCropper(cropvalue);
+  };
 
   useEffect(() => {
     getDoctor();
@@ -112,11 +112,11 @@ const DashboardContent = () => {
     //console.log("inside form",name,city,mobile,img,vid);
   };
 
-  const handleConfirm =async ()=>{
+  const handleConfirm = async () => {
     try {
       //toast.info("Loading...")
-     
-      setShowConfirmation(false)
+
+      setShowConfirmation(false);
       setLoading(true);
       const formdata = new FormData();
 
@@ -125,10 +125,8 @@ const DashboardContent = () => {
       formdata.append("city", city);
       formdata.append("mobile", mobile);
       formdata.append("specility", specility);
-      
-      
+
       const doctorPromise = await axios.post(`${BASEURL}/add-doctor`, formdata);
-     
 
       let user_id = doctorPromise.data.doctorId;
 
@@ -138,7 +136,7 @@ const DashboardContent = () => {
       const videoform = new FormData();
       videoform.append("video", vid);
       videoform.append("user_id", user_id);
-      videoform.append("videoname",videoname)
+      videoform.append("videoname", videoname);
       axios.post(`${BASEURL}/add-video`, videoform);
     } catch (error) {
       console.log(error);
@@ -149,18 +147,17 @@ const DashboardContent = () => {
     setImage("");
     setVideo("");
     setSpecility("");
-    setVideoName("")
+    setVideoName("");
     setQrcode(false);
     setCurrentIndex(0);
-
-  }
-   const handleCancel = ()=>{
+  };
+  const handleCancel = () => {
     setShowConfirmation(false);
-   }
+  };
 
   return (
-    <div style={{backgroundColor:"#d0f0ff"}}>
-      <div className="content-header" style={{ backgroundColor: "#c0ebff" }}>
+    <div>
+      <div className="content-header mainheader">
         <div className="container-fluid">
           <div className="row mb-2">
             <div className="col-sm-6"></div>
@@ -421,8 +418,10 @@ const DashboardContent = () => {
                               type="file"
                               accept="image/*"
                               onChange={(e) => {
-                                setCropmodel(true)
-                                setImage1(URL.createObjectURL(e.target.files[0]));
+                                setCropmodel(true);
+                                setImage1(
+                                  URL.createObjectURL(e.target.files[0])
+                                );
                               }}
                             />
                             <p>Doctor Photo</p>
@@ -513,9 +512,14 @@ const DashboardContent = () => {
                         </div>
                       </div>
                     </form>
-                      
-                      
-                      {cropmodel && <CropImg img1={img1} setCropperFun={setCropperFun} getCropData={getCropData} />}
+
+                    {cropmodel && (
+                      <CropImg
+                        img1={img1}
+                        setCropperFun={setCropperFun}
+                        getCropData={getCropData}
+                      />
+                    )}
                   </div>
                 )}
               </div>
@@ -538,12 +542,12 @@ const DashboardContent = () => {
           </div>
         </div>
         {showConfirmation && (
-              <ConfirmationPopup
-                message="Are you sure you want to Add Doctor?"
-                onConfirm={() => handleConfirm()}
-                onCancel={handleCancel}
-              />
-            )}
+          <ConfirmationPopup
+            message="Are you sure you want to Add Doctor?"
+            onConfirm={() => handleConfirm()}
+            onCancel={handleCancel}
+          />
+        )}
       </div>
 
       <ToastContainer />
@@ -565,29 +569,26 @@ function DoctorList({ doctor, getDoctor }) {
   const [loading1, setLoading1] = useState(false);
 
   const [video, setVideo] = useState(null);
-  const [videoname,setVideoName] = useState("")
+  const [videoname, setVideoName] = useState("");
 
   const [cropper, setCropper] = useState();
-  const [cropmodel, setCropmodel] = useState(false)
+  const [cropmodel, setCropmodel] = useState(false);
 
   const handelEditSubmit = async (e) => {
     e.preventDefault();
-    if(video && !videoname){
-      toast.error("videoname is required")
-      return
+    if (video && !videoname) {
+      toast.error("videoname is required");
+      return;
     }
-    if(videoname && !video){
-      toast.error("video is required")
-      return
+    if (videoname && !video) {
+      toast.error("video is required");
+      return;
     }
-   
+
     setShowConfirmation(true);
   };
 
- 
-
   const handelDelete = async (id) => {
-    
     try {
       setLoading1(true);
       await axios.delete(`${BASEURL}/delete/video/${id}`);
@@ -598,7 +599,6 @@ function DoctorList({ doctor, getDoctor }) {
     } catch (error) {
       console.log(error);
     }
-
   };
 
   const handleConfirm = async (id) => {
@@ -635,7 +635,7 @@ function DoctorList({ doctor, getDoctor }) {
         videoform.append("video", video);
         videoform.append("user_id", id);
         videoform.append("videoname", videoname);
-        
+
         axios.post(`${BASEURL}/add-video`, videoform);
       }
     } catch (error) {
@@ -644,8 +644,8 @@ function DoctorList({ doctor, getDoctor }) {
       // Hide the loader when the operation is complete
       setLoading1(false);
     }
-    setVideoName("")
-    setVideo("")
+    setVideoName("");
+    setVideo("");
   };
 
   const handleCancel = () => {
@@ -653,7 +653,6 @@ function DoctorList({ doctor, getDoctor }) {
     setShowConfirmation(false);
     // Handle cancellation as needed...
   };
-
 
   const getCropData = async () => {
     if (cropper) {
@@ -663,76 +662,86 @@ function DoctorList({ doctor, getDoctor }) {
           return new File([blob], "docimage.png");
         });
       if (file) {
-       setImage(file);
+        setImage(file);
       }
     }
-    setCropmodel(false)
+    setCropmodel(false);
   };
 
-  const setCropperFun = (cropvalue)=>{
-     setCropper(cropvalue)
-  }
+  const setCropperFun = (cropvalue) => {
+    setCropper(cropvalue);
+  };
 
   const modalId = `infodoc-${doctor.id}`;
   const editId = `editdoc-${doctor.id}`;
 
   return (
-
     <div className="col-md-2 p-1">
-      {loading1 ?<Loader/> :<div className="card doc_card" >
-        <div style={{ position: "relative" }}>
-          <div className="img__wrap text-center">
-            <img
-              id=""
-              src={`${BASEURL}/uploads/${doctor.imgurl}`}
-              width="199"
-              height="177"
-              className="img__img"
-            />
+      {loading1 ? (
+        <Loader />
+      ) : (
+        <div className="card doc_card">
+          <div style={{ position: "relative" }}>
+            <div className="img__wrap text-center">
+              <img
+                id=""
+                src={`${BASEURL}/uploads/${doctor.imgurl}`}
+                width="199"
+                height="177"
+                className="img__img"
+              />
 
-            <div id="outer" className="img__description">
-              <div className="inner">
-                <Link to={`poster/${doctor.id}`} title="View">
-                  <i className="nav-icon fas fa-image"></i>
-                </Link>
-              </div>
+              <div id="outer" className="img__description">
+                <div className="inner">
+                  <Link to={`poster/${doctor.id}`} title="View">
+                    <i className="nav-icon fas fa-image"></i>
+                  </Link>
+                </div>
 
-              <div className="inner">
-                <a title="Info" data-toggle="modal" data-target={`#${modalId}`}>
-                  <i className="nav-icon fas fa-info"></i>
-                </a>
-              </div>
+                <div className="inner">
+                  <a
+                    title="Info"
+                    data-toggle="modal"
+                    data-target={`#${modalId}`}
+                  >
+                    <i className="nav-icon fas fa-info"></i>
+                  </a>
+                </div>
 
-              <div className="inner">
-                <a
-                  href=""
-                  title="Edit"
-                  data-toggle="modal"
-                  data-target={`#${editId}`}
-                >
-                  <i className="nav-icon fas fa-edit"></i>
-                </a>
-              </div>
+                <div className="inner">
+                  <a
+                    href=""
+                    title="Edit"
+                    data-toggle="modal"
+                    data-target={`#${editId}`}
+                  >
+                    <i className="nav-icon fas fa-edit"></i>
+                  </a>
+                </div>
 
-              <div className="inner" onClick={() => handelDelete(doctor.id)}>
-                <a title="Delete">
-                  <i className="nav-icon fas fa-trash"></i>
-                </a>
+                <div className="inner" onClick={() => handelDelete(doctor.id)}>
+                  <a title="Delete">
+                    <i className="nav-icon fas fa-trash"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
+          <div className="card-body ">
+            <h5
+              className="card-title text-center"
+              style={{ fontSize: "1.0rem" }}
+            >
+              <b>{doctor.name}</b>
+            </h5>
+          </div>
         </div>
-        <div className="card-body ">
-          <h5 className="card-title text-center" style={{ fontSize: "1.0rem" }}>
-            <b>{doctor.name}</b>
-          </h5>
-        </div>
-      </div>}
-      
+      )}
+
       <div
         className="modal fade show"
         id={modalId}
-       // data-backdrop="static"
+        // data-backdrop="static"
         //data-keyboard="false"
         style={{ paddingRight: "17px" }}
         //aria-labelledby={`${modalId}-label`}
@@ -874,7 +883,7 @@ function DoctorList({ doctor, getDoctor }) {
                         type="file"
                         accept="image/*"
                         onChange={(e) => {
-                          setCropmodel(true)
+                          setCropmodel(true);
                           setImage1(URL.createObjectURL(e.target.files[0]));
                         }}
                       />
@@ -959,32 +968,31 @@ function DoctorList({ doctor, getDoctor }) {
                       </label>
                     </div>
 
-
                     <div className="row-sm-6">
-                              <div
-                                className="form-group"
-                                style={{
-                                  display: "flex",
+                      <div
+                        className="form-group"
+                        style={{
+                          display: "flex",
 
-                                  justifyContent: "space-around",
-                                  width: "80%",
-                                  marginTop: "10px",
-                                  textAlign: "center",
-                                }}
-                              >
-                                <label style={{ marginTop: "5px" }}>
-                                  Add Video Name*
-                                </label>
-                                <input
-                                  style={{ width: "50%" }}
-                                  type="text"
-                                  className="form-control"
-                                  onChange={(e) => {
-                                    setVideoName(e.target.value);
-                                  }}
-                                />
-                              </div>
-                            </div>
+                          justifyContent: "space-around",
+                          width: "80%",
+                          marginTop: "10px",
+                          textAlign: "center",
+                        }}
+                      >
+                        <label style={{ marginTop: "5px" }}>
+                          Add Video Name*
+                        </label>
+                        <input
+                          style={{ width: "50%" }}
+                          type="text"
+                          className="form-control"
+                          onChange={(e) => {
+                            setVideoName(e.target.value);
+                          }}
+                        />
+                      </div>
+                    </div>
 
                     <div className="text-center mt-3">
                       <input
@@ -992,7 +1000,6 @@ function DoctorList({ doctor, getDoctor }) {
                         value="Submit"
                         style={{ width: "22%" }}
                         className="btn btn-primary"
-
                       />
                       <span className="error regspan"></span>
                       <div
@@ -1010,8 +1017,13 @@ function DoctorList({ doctor, getDoctor }) {
                   </div>
                 </div>
               </form>
-          {cropmodel && <CropImg img1={img1} setCropperFun={setCropperFun} getCropData={getCropData} />}
-
+              {cropmodel && (
+                <CropImg
+                  img1={img1}
+                  setCropperFun={setCropperFun}
+                  getCropData={getCropData}
+                />
+              )}
             </div>
             {showConfirmation && (
               <ConfirmationPopup
@@ -1021,10 +1033,6 @@ function DoctorList({ doctor, getDoctor }) {
               />
             )}
           </div>
-
-
-
-
         </div>
       </div>
     </div>

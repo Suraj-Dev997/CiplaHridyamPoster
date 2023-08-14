@@ -1,34 +1,30 @@
-
 import "../../plugins/daterangepicker/daterangepicker.css";
 import "../../plugins/icheck-bootstrap/icheck-bootstrap.min.css";
-import "../../plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css"
-import "../../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
-import "../../plugins/select2/css/select2.min.css"
-import "../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css"
-import "../../plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css"
-import "../../plugins/fontawesome-free/css/all.min.css"
+import "../../plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css";
+import "../../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css";
+import "../../plugins/select2/css/select2.min.css";
+import "../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css";
+import "../../plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css";
+import "../../plugins/fontawesome-free/css/all.min.css";
 
-import "../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"
-import "../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css"
-import "../../plugins/select2/css/select2.min.css"
-import "../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css"
-import "../../diste/css/adminlte.min.css"
-import "../../diste/css/style.css"
+import "../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css";
+import "../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css";
+import "../../plugins/select2/css/select2.min.css";
+import "../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css";
+import "../../diste/css/adminlte.min.css";
+import "../../diste/css/style.css";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 //import { useContext } from "react";
 //import { IdContext } from "../context/AuthContext";
 
-
-
 const DashboardStyle = () => {
-
   //const {handelLogin} = useContext(IdContext)
-   const navigate = useNavigate()
-  const handelLogout = ()=>{
-    console.log("handellogout")
-    sessionStorage.removeItem('isLoggedIn');
-    navigate("/")
-  }
+  const navigate = useNavigate();
+  const handelLogout = () => {
+    console.log("handellogout");
+    sessionStorage.removeItem("isLoggedIn");
+    navigate("/");
+  };
 
   return (
     <div className="hold-transition sidebar-mini">
@@ -36,12 +32,7 @@ const DashboardStyle = () => {
         <nav className="main-header navbar navbar-expand navbar-dark navbar-navy">
           <ul className="navbar-nav">
             <li className="nav-item" hidden>
-              <a
-                className="nav-link"
-                data-widget="pushmenu"
-              
-                role="button"
-              >
+              <a className="nav-link" data-widget="pushmenu" role="button">
                 <i className="fas fa-bars"></i>
               </a>
             </li>
@@ -49,11 +40,11 @@ const DashboardStyle = () => {
 
           <ul className="navbar-nav ml-auto">
             <li className="nav-item dropdown">
-              <a className="nav-link" data-toggle="dropdown" >
-                <i className="far fa-user-circle"></i>
+              <a className="nav-link" data-toggle="dropdown">
+                <i className="far fa-user"></i>
               </a>
               <div className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                <div  className="dropdown-item">
+                <div className="dropdown-item">
                   <div className="media">
                     <img
                       src="/images/avatar5.png"
@@ -70,7 +61,7 @@ const DashboardStyle = () => {
                   </div>
 
                   <div className="dropdown-divider"></div>
-                  
+
                   <div className="dropdown-item" onClick={handelLogout}>
                     <i className="fas fa-sign-out-alt mr-2"></i>Logout
                   </div>
@@ -81,7 +72,7 @@ const DashboardStyle = () => {
         </nav>
 
         <aside className="main-sidebar sidebar-dark-primary elevation-4">
-          <a  className="brand-link text-center">
+          <a className="brand-link text-center">
             <span className="brand-text font-weight-light">
               <img
                 src="/images/logoRounded.png"
@@ -111,12 +102,14 @@ const DashboardStyle = () => {
         </aside>
 
         {/* <!-- Content Wrapper. Contains page content --> */}
-        <div className="content-wrapper"> <Outlet /></div>
+        <div className="content-wrapper bgcw">
+          {" "}
+          <Outlet />
+        </div>
         {/* <!-- /.content-wrapper --> */}
-       
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DashboardStyle
+export default DashboardStyle;

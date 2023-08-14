@@ -1,0 +1,23 @@
+.mainheader {
+  background-color: #9ab9d5;
+}
+.bgcw {
+  background-image: url("/images/bg2.png") !important;
+  background-size: cover !important;
+}
+::-webkit-scrollbar {
+  width: 4px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #616161;
+}

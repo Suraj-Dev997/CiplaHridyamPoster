@@ -54,7 +54,7 @@ h2,
   bottom: 0;
   width: 40px;
   height: 40px;
-  background: #026b92;
+  background: #0e3e6d;
   font-size: 20px;
   border-radius: 5px 0 0 5px;
 }
@@ -86,8 +86,8 @@ h2,
 
 .btn_primary {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #0e3e6d;
+  border-color: #0e3e6d;
 }
 .btn_primary:hover {
   color: #fff;
@@ -191,7 +191,7 @@ h2,
   line-height: 1.8;
   font-weight: normal;
 
-  background-color: #026b92;
+  background-color: #0e3e6d;
   background-size: cover;
   height: 100vh;
   background-repeat: no-repeat;
@@ -229,7 +229,7 @@ h2 {
   bottom: 0;
   width: 40px;
   height: 40px;
-  background: #026b92;
+  background: #0e3e6d;
   font-size: 20px;
   border-radius: 5px 0 0 5px;
 }
@@ -262,16 +262,15 @@ h2 {
   outline: none;
 }
 .btn.btn_primary {
-  background: #026b92 !important;
-  border: 1px solid #026b92 !important;
+  background: #0e3e6d !important;
+  border: 1px solid #0e3e6d !important;
   color: #ffffff !important;
 }
 .btn.btn_primary:hover {
   background: #fff !important;
   border: 1px solid #fbc5df !important;
-  color: #026b92 !important;
+  color: #0e3e6d !important;
 }
-
 
 button,
 [type="button"],
@@ -295,6 +294,6 @@ button::-moz-focus-inner,
   border-style: none;
 }
 
-.mg_bot{
+.mg_bot {
   margin-bottom: 20px;
 }

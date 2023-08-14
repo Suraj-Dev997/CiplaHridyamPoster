@@ -96,7 +96,12 @@
   transition: all 0.3s linear;
 }
 
-.small-box .icon > i.fa, .small-box .icon > i.fas, .small-box .icon > i.far, .small-box .icon > i.fab, .small-box .icon > i.glyphicon, .small-box .icon > i.ion {
+.small-box .icon > i.fa,
+.small-box .icon > i.fas,
+.small-box .icon > i.far,
+.small-box .icon > i.fab,
+.small-box .icon > i.glyphicon,
+.small-box .icon > i.ion {
   font-size: 70px;
   top: 20px;
 }
@@ -109,7 +114,12 @@
   font-size: 95px;
 }
 
-.small-box:hover .icon > i.fa, .small-box:hover .icon > i.fas, .small-box:hover .icon > i.far, .small-box:hover .icon > i.fab, .small-box:hover .icon > i.glyphicon, .small-box:hover .icon > i.ion {
+.small-box:hover .icon > i.fa,
+.small-box:hover .icon > i.fas,
+.small-box:hover .icon > i.far,
+.small-box:hover .icon > i.fab,
+.small-box:hover .icon > i.glyphicon,
+.small-box:hover .icon > i.ion {
   font-size: 75px;
 }
 
@@ -132,7 +142,7 @@
   display: flex;
   margin-bottom: 1rem;
   min-height: 80px;
-  padding: .5rem;
+  padding: 0.5rem;
   position: relative;
   width: 100%;
 }
@@ -172,7 +182,7 @@
 
 .info-box .info-box-number {
   display: block;
-  margin-top: .25rem;
+  margin-top: 0.25rem;
   font-weight: 700;
 }
 
@@ -226,12 +236,12 @@
 
 .info-box .info-box .bg-warning,
 .info-box .info-box .bg-gradient-warning {
-  color: #1F2D3D;
+  color: #1f2d3d;
 }
 
 .info-box .info-box .bg-warning .progress-bar,
 .info-box .info-box .bg-gradient-warning .progress-bar {
-  background-color: #1F2D3D;
+  background-color: #1f2d3d;
 }
 
 .info-box .info-box .bg-danger,
@@ -246,12 +256,12 @@
 
 .info-box .info-box .bg-light,
 .info-box .info-box .bg-gradient-light {
-  color: #1F2D3D;
+  color: #1f2d3d;
 }
 
 .info-box .info-box .bg-light .progress-bar,
 .info-box .info-box .bg-gradient-light .progress-bar {
-  background-color: #1F2D3D;
+  background-color: #1f2d3d;
 }
 
 .info-box .info-box .bg-dark,
@@ -325,7 +335,7 @@
   border-radius: 0.25rem;
   background: #dee2e6;
   bottom: 0;
-  content: '';
+  content: "";
   left: 31px;
   margin: 0;
   position: absolute;
@@ -339,7 +349,8 @@
   position: relative;
 }
 
-.timeline > div::before, .timeline > div::after {
+.timeline > div::before,
+.timeline > div::after {
   content: "";
   display: table;
 }
@@ -385,7 +396,9 @@
   margin: 10px;
 }
 
-.timeline > div > .timeline-item > .timeline-body > dl, .timeline > div > .timeline-item > .timeline-body ol, .timeline > div > .timeline-item > .timeline-body ul {
+.timeline > div > .timeline-item > .timeline-body > dl,
+.timeline > div > .timeline-item > .timeline-body ol,
+.timeline > div > .timeline-item > .timeline-body ul {
   margin: 0;
 }
 
@@ -523,7 +536,7 @@
 
 .direct-chat-messages,
 .direct-chat-contacts {
-  transition: transform .5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .direct-chat-text {
@@ -536,10 +549,11 @@
   position: relative;
 }
 
-.direct-chat-text::after, .direct-chat-text::before {
+.direct-chat-text::after,
+.direct-chat-text::before {
   border: solid transparent;
   border-right-color: #d2d6de;
-  content: ' ';
+  content: " ";
   height: 0;
   pointer-events: none;
   position: absolute;
@@ -563,7 +577,8 @@
   margin-right: 50px;
 }
 
-.right .direct-chat-text::after, .right .direct-chat-text::before {
+.right .direct-chat-text::after,
+.right .direct-chat-text::before {
   border-left-color: #d2d6de;
   border-right-color: transparent;
   left: 100%;
@@ -682,13 +697,14 @@
 }
 
 .direct-chat-primary .right > .direct-chat-text {
-  background: #007bff;
-  border-color: #007bff;
+  background: #0e3e6d;
+  border-color: #0e3e6d;
   color: #ffffff;
 }
 
-.direct-chat-primary .right > .direct-chat-text::after, .direct-chat-primary .right > .direct-chat-text::before {
-  border-left-color: #007bff;
+.direct-chat-primary .right > .direct-chat-text::after,
+.direct-chat-primary .right > .direct-chat-text::before {
+  border-left-color: #0e3e6d;
 }
 
 .direct-chat-secondary .right > .direct-chat-text {
@@ -697,7 +713,8 @@
   color: #ffffff;
 }
 
-.direct-chat-secondary .right > .direct-chat-text::after, .direct-chat-secondary .right > .direct-chat-text::before {
+.direct-chat-secondary .right > .direct-chat-text::after,
+.direct-chat-secondary .right > .direct-chat-text::before {
   border-left-color: #6c757d;
 }
 
@@ -707,7 +724,8 @@
   color: #ffffff;
 }
 
-.direct-chat-success .right > .direct-chat-text::after, .direct-chat-success .right > .direct-chat-text::before {
+.direct-chat-success .right > .direct-chat-text::after,
+.direct-chat-success .right > .direct-chat-text::before {
   border-left-color: #28a745;
 }
 
@@ -717,17 +735,19 @@
   color: #ffffff;
 }
 
-.direct-chat-info .right > .direct-chat-text::after, .direct-chat-info .right > .direct-chat-text::before {
+.direct-chat-info .right > .direct-chat-text::after,
+.direct-chat-info .right > .direct-chat-text::before {
   border-left-color: #17a2b8;
 }
 
 .direct-chat-warning .right > .direct-chat-text {
   background: #ffc107;
   border-color: #ffc107;
-  color: #1F2D3D;
+  color: #1f2d3d;
 }
 
-.direct-chat-warning .right > .direct-chat-text::after, .direct-chat-warning .right > .direct-chat-text::before {
+.direct-chat-warning .right > .direct-chat-text::after,
+.direct-chat-warning .right > .direct-chat-text::before {
   border-left-color: #ffc107;
 }
 
@@ -737,17 +757,19 @@
   color: #ffffff;
 }
 
-.direct-chat-danger .right > .direct-chat-text::after, .direct-chat-danger .right > .direct-chat-text::before {
+.direct-chat-danger .right > .direct-chat-text::after,
+.direct-chat-danger .right > .direct-chat-text::before {
   border-left-color: #dc3545;
 }
 
 .direct-chat-light .right > .direct-chat-text {
   background: #f8f9fa;
   border-color: #f8f9fa;
-  color: #1F2D3D;
+  color: #1f2d3d;
 }
 
-.direct-chat-light .right > .direct-chat-text::after, .direct-chat-light .right > .direct-chat-text::before {
+.direct-chat-light .right > .direct-chat-text::after,
+.direct-chat-light .right > .direct-chat-text::before {
   border-left-color: #f8f9fa;
 }
 
@@ -757,7 +779,8 @@
   color: #ffffff;
 }
 
-.direct-chat-dark .right > .direct-chat-text::after, .direct-chat-dark .right > .direct-chat-text::before {
+.direct-chat-dark .right > .direct-chat-text::after,
+.direct-chat-dark .right > .direct-chat-text::before {
   border-left-color: #343a40;
 }
 
@@ -767,7 +790,8 @@
   color: #ffffff;
 }
 
-.direct-chat-lightblue .right > .direct-chat-text::after, .direct-chat-lightblue .right > .direct-chat-text::before {
+.direct-chat-lightblue .right > .direct-chat-text::after,
+.direct-chat-lightblue .right > .direct-chat-text::before {
   border-left-color: #3c8dbc;
 }
 
@@ -777,7 +801,8 @@
   color: #ffffff;
 }
 
-.direct-chat-navy .right > .direct-chat-text::after, .direct-chat-navy .right > .direct-chat-text::before {
+.direct-chat-navy .right > .direct-chat-text::after,
+.direct-chat-navy .right > .direct-chat-text::before {
   border-left-color: #001f3f;
 }
 
@@ -787,17 +812,19 @@
   color: #ffffff;
 }
 
-.direct-chat-olive .right > .direct-chat-text::after, .direct-chat-olive .right > .direct-chat-text::before {
+.direct-chat-olive .right > .direct-chat-text::after,
+.direct-chat-olive .right > .direct-chat-text::before {
   border-left-color: #3d9970;
 }
 
 .direct-chat-lime .right > .direct-chat-text {
   background: #01ff70;
   border-color: #01ff70;
-  color: #1F2D3D;
+  color: #1f2d3d;
 }
 
-.direct-chat-lime .right > .direct-chat-text::after, .direct-chat-lime .right > .direct-chat-text::before {
+.direct-chat-lime .right > .direct-chat-text::after,
+.direct-chat-lime .right > .direct-chat-text::before {
   border-left-color: #01ff70;
 }
 
@@ -807,7 +834,8 @@
   color: #ffffff;
 }
 
-.direct-chat-fuchsia .right > .direct-chat-text::after, .direct-chat-fuchsia .right > .direct-chat-text::before {
+.direct-chat-fuchsia .right > .direct-chat-text::after,
+.direct-chat-fuchsia .right > .direct-chat-text::before {
   border-left-color: #f012be;
 }
 
@@ -817,18 +845,20 @@
   color: #ffffff;
 }
 
-.direct-chat-maroon .right > .direct-chat-text::after, .direct-chat-maroon .right > .direct-chat-text::before {
+.direct-chat-maroon .right > .direct-chat-text::after,
+.direct-chat-maroon .right > .direct-chat-text::before {
   border-left-color: #d81b60;
 }
 
 .direct-chat-blue .right > .direct-chat-text {
-  background: #007bff;
-  border-color: #007bff;
+  background: #0e3e6d;
+  border-color: #0e3e6d;
   color: #ffffff;
 }
 
-.direct-chat-blue .right > .direct-chat-text::after, .direct-chat-blue .right > .direct-chat-text::before {
-  border-left-color: #007bff;
+.direct-chat-blue .right > .direct-chat-text::after,
+.direct-chat-blue .right > .direct-chat-text::before {
+  border-left-color: #0e3e6d;
 }
 
 .direct-chat-indigo .right > .direct-chat-text {
@@ -837,7 +867,8 @@
   color: #ffffff;
 }
 
-.direct-chat-indigo .right > .direct-chat-text::after, .direct-chat-indigo .right > .direct-chat-text::before {
+.direct-chat-indigo .right > .direct-chat-text::after,
+.direct-chat-indigo .right > .direct-chat-text::before {
   border-left-color: #6610f2;
 }
 
@@ -847,7 +878,8 @@
   color: #ffffff;
 }
 
-.direct-chat-purple .right > .direct-chat-text::after, .direct-chat-purple .right > .direct-chat-text::before {
+.direct-chat-purple .right > .direct-chat-text::after,
+.direct-chat-purple .right > .direct-chat-text::before {
   border-left-color: #6f42c1;
 }
 
@@ -857,7 +889,8 @@
   color: #ffffff;
 }
 
-.direct-chat-pink .right > .direct-chat-text::after, .direct-chat-pink .right > .direct-chat-text::before {
+.direct-chat-pink .right > .direct-chat-text::after,
+.direct-chat-pink .right > .direct-chat-text::before {
   border-left-color: #e83e8c;
 }
 
@@ -867,27 +900,30 @@
   color: #ffffff;
 }
 
-.direct-chat-red .right > .direct-chat-text::after, .direct-chat-red .right > .direct-chat-text::before {
+.direct-chat-red .right > .direct-chat-text::after,
+.direct-chat-red .right > .direct-chat-text::before {
   border-left-color: #dc3545;
 }
 
 .direct-chat-orange .right > .direct-chat-text {
   background: #fd7e14;
   border-color: #fd7e14;
-  color: #1F2D3D;
+  color: #1f2d3d;
 }
 
-.direct-chat-orange .right > .direct-chat-text::after, .direct-chat-orange .right > .direct-chat-text::before {
+.direct-chat-orange .right > .direct-chat-text::after,
+.direct-chat-orange .right > .direct-chat-text::before {
   border-left-color: #fd7e14;
 }
 
 .direct-chat-yellow .right > .direct-chat-text {
   background: #ffc107;
   border-color: #ffc107;
-  color: #1F2D3D;
+  color: #1f2d3d;
 }
 
-.direct-chat-yellow .right > .direct-chat-text::after, .direct-chat-yellow .right > .direct-chat-text::before {
+.direct-chat-yellow .right > .direct-chat-text::after,
+.direct-chat-yellow .right > .direct-chat-text::before {
   border-left-color: #ffc107;
 }
 
@@ -897,7 +933,8 @@
   color: #ffffff;
 }
 
-.direct-chat-green .right > .direct-chat-text::after, .direct-chat-green .right > .direct-chat-text::before {
+.direct-chat-green .right > .direct-chat-text::after,
+.direct-chat-green .right > .direct-chat-text::before {
   border-left-color: #28a745;
 }
 
@@ -907,7 +944,8 @@
   color: #ffffff;
 }
 
-.direct-chat-teal .right > .direct-chat-text::after, .direct-chat-teal .right > .direct-chat-text::before {
+.direct-chat-teal .right > .direct-chat-text::after,
+.direct-chat-teal .right > .direct-chat-text::before {
   border-left-color: #20c997;
 }
 
@@ -917,17 +955,19 @@
   color: #ffffff;
 }
 
-.direct-chat-cyan .right > .direct-chat-text::after, .direct-chat-cyan .right > .direct-chat-text::before {
+.direct-chat-cyan .right > .direct-chat-text::after,
+.direct-chat-cyan .right > .direct-chat-text::before {
   border-left-color: #17a2b8;
 }
 
 .direct-chat-white .right > .direct-chat-text {
   background: #ffffff;
   border-color: #ffffff;
-  color: #1F2D3D;
+  color: #1f2d3d;
 }
 
-.direct-chat-white .right > .direct-chat-text::after, .direct-chat-white .right > .direct-chat-text::before {
+.direct-chat-white .right > .direct-chat-text::after,
+.direct-chat-white .right > .direct-chat-text::before {
   border-left-color: #ffffff;
 }
 
@@ -937,7 +977,8 @@
   color: #ffffff;
 }
 
-.direct-chat-gray .right > .direct-chat-text::after, .direct-chat-gray .right > .direct-chat-text::before {
+.direct-chat-gray .right > .direct-chat-text::after,
+.direct-chat-gray .right > .direct-chat-text::before {
   border-left-color: #6c757d;
 }
 
@@ -947,7 +988,8 @@
   color: #ffffff;
 }
 
-.direct-chat-gray-dark .right > .direct-chat-text::after, .direct-chat-gray-dark .right > .direct-chat-text::before {
+.direct-chat-gray-dark .right > .direct-chat-text::after,
+.direct-chat-gray-dark .right > .direct-chat-text::before {
   border-left-color: #343a40;
 }
 
