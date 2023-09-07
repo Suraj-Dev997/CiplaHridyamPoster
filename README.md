@@ -17,6 +17,7 @@ Go to Project Directory and run this command to install dependencies
 ```bash
 npm install
 ```
+![ConsuGoods](https://github.com/Suraj-Dev997/CiplaHridyamPoster/assets/21136733/f784f242-d3cd-4165-8777-54c7f3bc01e7)
 
 ### Step-2 run the application
 
